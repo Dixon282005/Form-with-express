@@ -1,19 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <main>
     <h1>Formulario de contacto</h1>
-    <form method="POST" action="">
+    <form id="contacto-form" action="/form-contacto" method="POST" >
       <label for="name">Nombre:</label>
-      <input type="text">
-      <label for="email">Correo Electrónico</label>
-      <input type="email" name="email">
+      <input type="text" name="name" placeholder="Jhon Doe" required id="name">
+      <label for="email">Correo Electrónico:</label>
+      <input type="email" name="email"  placeholder = "ejemplo@gmail.com" required id="email">
       <label for="comment">Comentario:</label>
-      <textarea name="message"></textarea>
-      <button type="submit">Enviar mensaje</button>
+      <textarea name="mensaje"  placeholder="Escribe un mensaje..." id="mensaje" required></textarea>
+      <button type="submit" id="submit-btn">Enviar</button>
     </form>
-  </body>
+  </main>
+</body>
+
+<script>
+  document.getElementById('submit-btn').addEventListener('click', async () => {
+    const form = document.getElementById('contacto-form');
+    const formData = new FormData(form);
+  
+    const response = await fetch('/form-contacto', {
+      method: 'POST',
+      body: formData,
+    });
+  
+    if (response.ok) {
+      console.log('Formulario enviado con éxito');
+    } else {
+      console.error('Error al enviar el formulario');
+    }
+  });
+  </script>
+
 </html>
