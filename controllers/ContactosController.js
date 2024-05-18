@@ -20,15 +20,13 @@ class ContactosController {
     const ip = req.ip;
     const fecha = new Date().toISOString();
 
-   
-    await this.contactosModel.crearContacto(email, name, mensaje, ip, fecha);
-
-    const contactos = await this.contactosModel.obtenerAllContactos();
-
-    console.log(contactos);
-
-    // Redireccionar al usuario a una página de confirmación
-    res.redirect("/");
+    try{
+     await this.contactosModel.crearContacto(email, name, mensaje, ip, fecha);
+     res.status(200).send("Tus datos se han enviado con exito");
+    }catch(error){
+     res.status(500).send("Error enviando los datos");
+        
+    }
   }
 }
 
