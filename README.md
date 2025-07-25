@@ -35,27 +35,27 @@ It was one of my first complete backend projects, created to test and demonstrat
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/your-username/mvc-contact-form.git
+git clone https://github.com/Dixon282005/Form-with-express.git
 
 
-Install dependencies
+2. **Install dependencies**
 
 ```bash
 npm install
 
-Set up your database
+3. **Set up your database**
 
 
-Create a simple SQL table with fields like name, email, and message.
+4. **Create a simple SQL table with fields like name, email, and message.**
 Make sure your db.js file is connected to it properly.
 
 
-Run the server
+5. **Run the server**
 ```bash
 npm start
 
 
-Open in your browser
+6. **Open in your browser**
 ```bash
 http://localhost:3000
 
