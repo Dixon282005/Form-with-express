@@ -36,13 +36,12 @@ It was one of my first complete backend projects, created to test and demonstrat
 1. **Clone the repository**
 ```bash
 git clone https://github.com/Dixon282005/Form-with-express.git
-
-
+```
 2. **Install dependencies**
 
 ```bash
 npm install
-
+```
 3. **Set up your database**
 
 
@@ -54,12 +53,12 @@ Make sure your db.js file is connected to it properly.
 ```bash
 npm start
 
-
+```
 6. **Open in your browser**
 ```bash
 http://localhost:3000
 
-
+```
 📌 Notes
 This is a beginner-friendly project, built to learn and practice fullstack fundamentals.
 
